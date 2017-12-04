@@ -1,4 +1,3 @@
-
 /*@variablse------------------------------------*/
 @font: 'Raleway', sans-serif;
 @colorDark: rgb(38, 38, 38);
@@ -505,6 +504,8 @@ a {
 }
 .h1_contact {
     font-size: 90px;
+    padding-top: 25px;
+    padding-bottom: 70px;
 }
 .h2 {
     .fonts(@size:17px, @weight:700);
@@ -547,7 +548,7 @@ a {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 1170px;
+    max-width: 1170px;
     margin: 0 auto;
 }
 .contact_item {
@@ -556,6 +557,14 @@ a {
 .contact_item__adress {
     width: 317px;
     margin-right: 200px;
+}
+.form_item {
+    height: 50px;
+    margin-bottom: 14px;
+    position: relative;
+}
+.form_item:hover + .form_hover {
+    display: block;
 }
 
 .form_input{
@@ -570,7 +579,14 @@ a {
         background-color:  #00c4c4;
         border: none;
         outline: 0;
+    }
 }
+.form_hover {
+    position: absolute;
+    background: #385b81;
+    display: none;
+    width: 5px;
+    height: 50px;
 }
 .form_input__message {
     height: 250px;
