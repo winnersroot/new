@@ -79,22 +79,22 @@ a {
 
 .header {
     width: 100vw;
-    height: 100vh;
+    height: 1000px;
     min-width: 980px;
-    background: url(../img/header-bg.png) 60% 60%;
+    background: url(../img/header-bg.png) #f9f8fb;
     background-size: cover;
 }
 .header_conteiner {
     width: 1170px;
     margin: auto;
-    padding-top: 50px;
+    padding-top: 55px;
 }
 .header_fixed {
     width: inherit;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: sticky;
+    position: fixed;
 }
 .nav {
     text-align: right;
@@ -116,17 +116,19 @@ a {
         height: 4px;
         background-color: #ff6033;
     }
+    &:hover::before {
+        width: 100%; 
+    }
 }
-.nav_link:hover:before {
-    width: 100%;
-}
+
 .header_info {
     width: 370px;
     height: 165px;
-    margin-top: 120px;
+    margin-top: 260px;
 }
 .header_title {
     font: 700 60px/60px @font;
+    padding-bottom: 30px;
 }
 .header_btn {
     width: 200px;
@@ -135,21 +137,20 @@ a {
 }
 .button {
     .button;
-    background-color: #ff6033;
-    &:hover {
-     box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.5);
-    }
+    .myHover();
+    background-color: #ff6033; 
 }
 .header_scroll {
     width: 30px;
     height: 40px;
-    margin: 90px auto;
+    margin: 280px auto 65px;
 }
 /*-END_HEADER------------------------------------*/
 
 /*-ABOUT_US------------------------------------*/
 .about {
     height: 700px;
+    min-width: 980px;
     color: @colorLight;
     background: #00b2b2;
     display: flex;
@@ -159,6 +160,8 @@ a {
     margin: 150px 80px;
 }
 .h1__light {
+    font-size: 90px;
+    padding-bottom: 70px;
     color: @colorLight;
 }
 .about_text {
@@ -277,7 +280,7 @@ a {
 
   .h1 {
     padding-top: 100px;
-    margin-bottom: 29px;
+    margin-bottom: 50px;
     text-align: center;
     font-size: 90px;
     font-weight: bold;
@@ -345,8 +348,13 @@ a {
 
 /*-SUBSCRIBE_TO_US------------------------------------*/
 .subscribe {
-    width: 1500px;
+    width: 100%;
+    min-width: 980px;
     height: 500px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
     background: url(../img/bg-subscribe.png) center no-repeat;
 }
 .subscribe_title {
@@ -356,7 +364,6 @@ a {
 }
 .content_subscribe {
     text-align: left;
-    padding-top: 100px;
     margin-left: 165px;
     width: 560px;
 }
@@ -387,6 +394,7 @@ a {
 /*-BLOG------------------------------------*/
 .blog {
     width: 100vw;
+    min-width: 980px;
     height: 860px;
     background: #b07cf7;
     color: @colorLight;
@@ -395,19 +403,21 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 70px;
-}
-.content_title__blog {
-    .h1;
-    color: @colorLight;
+    width: 570px;
+    margin: auto;
     text-align: center;
+    padding-top: 80px;
 }
 .h1__blog {
     .h1;
-    width: 570px;
-    text-align: center;
+    color: @colorLight;
+    font-size: 90px;
+    padding-bottom: 70px;
+}
+.describe__blog {
     color: @colorLight;
 }
+
 .blog_events {
     width: 1170px;
     height: 315px;
@@ -419,6 +429,21 @@ a {
     height: inherit;
     box-shadow: @shadow;
     position: relative;
+    &:hover .hover {
+        opacity: 1;
+        visibility: visible;
+        transition:  2s;
+    }
+    &:not(:hover) .hover {
+        transition:  2s;
+    }
+}
+.hover {
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
 }
 .event__1 {
     background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%), url(../img/img1.png);
@@ -432,21 +457,7 @@ a {
     background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 5%, transparent 100%), url(../img/img3.png);
     margin-left: 30px;
 }
-.hover {
-    width: inherit;
-    height: inherit;
-    position: absolute;
-    visibility: hidden;
-    opacity: 0;
-}
-.event:hover .hover {
-   opacity: 1;
-   visibility: visible;
-   transition:  2s;
-}
-.event:not(:hover) .hover {
-    transition:  2s;
-}
+
 .event_date {
     background: #4b5059;
     width: 55px;
@@ -490,7 +501,7 @@ a {
 
 /*-CONTACT-----------------------------------------*/
 
-.contact {
+/*.contact {
     background: url(../img/contact_bg.jpg) no-repeat;
     background-size: cover;
     min-width: 980px;
@@ -578,21 +589,21 @@ a {
 }
 
 ::-webkit-input-placeholder { /* WebKit browsers */
-   .fonts(@size:15px, @weight:300, @lineH:25px, @color:@colorLight);
+  /* .fonts(@size:15px, @weight:300, @lineH:25px, @color:@colorLight);
 }
 :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-   .fonts(@size:15px, @weight:300, @lineH:25px, @color:@colorLight);
+ /* .fonts(@size:15px, @weight:300, @lineH:25px, @color:@colorLight);
 }
 ::-moz-placeholder { /* Mozilla Firefox 19+ */
-   .fonts(@size:15px, @weight:300, @lineH:25px, @color:@colorLight);
+  /*.fonts(@size:15px, @weight:300, @lineH:25px, @color:@colorLight);
 }
 :-ms-input-placeholder { /* Internet Explorer 10+ */
-   .fonts(@size:15px, @weight:300, @lineH:25px, @color:@colorLight);
+  /* .fonts(@size:15px, @weight:300, @lineH:25px, @color:@colorLight);
 }
 
 /*-END_CONTACT-----------------------------------------*/
 /*-FOOTER-----------------------------------------*/
-.footer {
+/*.footer {
     background: #262626;
     display: flex;
     flex-direction: row;
