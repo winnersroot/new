@@ -48,7 +48,7 @@ a {
    text-decoration: none;
 }
 
-.fonts(@font, @color: @colorDark, @size: 15px, @weight: 300, @lineH: 25px) {
+.fonts(@font, @color:@colorDark, @size:15px, @weight:300, @lineH:25px) {
     font-family: @font;
     font-size: @size;
     font-weight: @weight;
@@ -57,11 +57,11 @@ a {
  }
 
 .h1 {
-    .fonts (@font, @color: @colorDark, @size: 60px, @weight: 800, @lineH: 25px);
+    .fonts (@font, @color:@colorDark, @size:60px, @weight:800, @lineH:25px);
 
 }
 .describe {
-    .fonts (@font, @color: @colorDark, @size: 17px, @weight: 300, @lineH: 27px);
+    .fonts (@font, @color:@colorDark, @size:17px, @weight:300, @lineH:27px);
 }
 .button {
     background-color:  #ff6033;
@@ -70,25 +70,9 @@ a {
     height: 55px;
     text-align: center;
     border: none;
-    .fonts (@font, @color: @colorLight, @size: 20px, @weight: 300, @lineH: 27px);
+    .fonts (@font, @color:@colorLight, @size:20px, @weight:300, @lineH:27px);
  }
 
-.h1 {
-	.fonts (@font, @color: @colorDark, @size: 60px, @weight: 800, @lineH: 25px);
-
-}
-.describe {
-	.fonts (@font, @color: @colorDark, @size: 17px, @weight: 300, @lineH: 27px);
-}
-.button {
-	background-color:  #ff6033;
-	box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.5);
-	width: 200px;
-	height: 55px;
-	text-align: center;
-    border: none;
-	.fonts (@font, @color: @colorLight, @size: 20px, @weight: 300, @lineH: 27px);
-}
 /*-END_GENERAL------------------------------------*/
 
 /*-HEADER------------------------------------*/
@@ -184,6 +168,180 @@ a {
 .about_text+.about_text {
     margin-top: 25px;
 }
+
+/*-- OUR_SERVICES --*/
+.services {
+    height: 790px;
+    min-width: 1200px;
+    background-color: #70bfff;
+    display: flex;
+    justify-content: center;
+    &_item {
+        width: 50%;
+        padding-top: 22px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: center;
+        margin-right: 200px;
+    }
+    &_button {
+        margin: 10px 0;
+        display: flex;
+        align-items: center;
+        background-color: @colorLight;
+        width: 400px;
+        height: 100px;
+        .fonts(@font, @colorDark, 20px, 700, 27px);
+        text-align: center;
+        box-shadow: @shadow;
+        .myHover();
+    }
+}
+.button_name {
+    flex-grow: 1;
+}
+
+.serviсes_svg {
+    width: 100px;
+    height: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-left: 1px solid #9d9d9d;
+    flex-shrink: 0;
+}
+.bucket {
+    width: 47px;
+    height: 44px;
+}
+
+.carrot {
+    width: 55px;
+    height: 55px;
+}
+
+.hand {
+    width: 55px;
+    height: 49px;
+}
+
+.world {
+    width: 54px;
+    height: 54px;
+}
+
+.services_title {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    padding-bottom: 60px;
+    &--h1 {
+        color: white;
+        position: absolute;
+        left: -83px;
+        top: 290px;
+        font-size: 90px;
+        font-weight: 800;
+    }
+}
+
+/*-END_SERVICES---------------------------------------*/
+
+/*-GALLERY--------------------------------------------*/
+
+.button__blue {
+  box-shadow: @shadow;
+  width: 200px;
+  height: 55px;
+  font-family: @font;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 27px;
+  text-align: center;
+  text-transform: uppercase;
+  display: block;
+  margin: 50px auto;
+  background-color: #5585a2;
+  color: @colorLight;
+}
+
+.gallery {
+  width: 100%;
+  background-color: #ffe92f;
+  font-family: @font;
+  color: @colorDark;
+  padding-bottom: 70px;
+
+  .h1 {
+    padding-top: 100px;
+    margin-bottom: 29px;
+    text-align: center;
+    font-size: 90px;
+    font-weight: bold;
+  }
+
+  .describe {
+    .fonts(@font, @color: @colorDark, @size: 15px, @weight: 300, @lineH: 25px);
+    text-align: center;
+    margin-bottom: 41px;
+  }
+
+  .gallery_img {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 1170px;
+    height: 980px;
+
+
+    .gallery_container {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    .gallery_container__main {
+      height: 550px;
+
+      .gallery_item__big {
+        height: 550px;
+        width: 770px;
+      }
+    }
+
+    .gallery_container__small {
+      margin-left:30px;
+      flex-wrap: wrap;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      .gallery_item__small {
+        height: 260px;
+        width: 370px;
+      }
+    }
+
+
+    .gallery_item {
+      box-shadow: @shadow;
+      .myHover
+    }
+
+
+
+    .gallery_item__medium {
+      height: 400px;
+      width: 570px;
+    }
+
+  }
+
+}
+/*-END_GALLERY---------------------------------------*/
 
 /*-SUBSCRIBE_TO_US------------------------------------*/
 .subscribe {
@@ -329,79 +487,6 @@ a {
 
 /*-END_ABOUT_US------------------------------------*/
 
-/*-- OUR_SERVICES --*/
-.services {
-    height: 790px;
-    min-width: 1200px;
-    background-color: #70bfff;
-    display: flex;
-    justify-content: center;
-    &_item {
-        width: 50%;
-        padding-top: 22px;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
-        justify-content: center;
-        margin-right: 200px;
-    }
-    &_button {
-        margin: 10px 0;
-        display: flex;
-        align-items: center;
-        background-color: @colorLight;
-        width: 400px;
-        height: 100px;
-        .fonts(@font, @colorDark, 20px, 700, 27px);
-        text-align: center;
-        box-shadow: @shadow;
-        .myHover();
-    }
-}
-.button_name {
-    flex-grow: 1;
-}
-.serviсes_svg {
-    width: 100px;
-    height: inherit;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-left: 1px solid #9d9d9d;
-    flex-shrink: 0;
-}
-.bucket {
-    width: 47px;
-    height: 44px;
-}
-.carrot {
-    width: 55px;
-    height: 55px;
-}
-.hand {
-    width: 55px;
-    height: 49px;
-}
-.world {
-    width: 54px;
-    height: 54px;
-}
-.services_title {
-    width: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    position: relative;
-    padding-bottom: 60px;
-    &--h1 {
-        color: white;
-        position: absolute;
-        left: -83px;
-        top: 290px;
-        font-size: 90px;
-        font-weight: 800;
-    }
-}
 
 /*-CONTACT-----------------------------------------*/
 
