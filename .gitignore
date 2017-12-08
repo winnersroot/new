@@ -1,8 +1,0 @@
-.idea/
-.idea/*
-img/
-img/*
-node_modules/
-node_modules/*
-*.json
-gulpfile.js
